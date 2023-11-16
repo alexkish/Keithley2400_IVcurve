@@ -66,7 +66,7 @@ keithley.measure_current(nplc=1.0, current=100e-6, auto_range=False)
 print('PD current = ', keithley.current, 'A')
 
 V_start = 0
-V_end = 55
+V_end = 25
 V_delta = 1
 N_points = (V_end-V_start)/V_delta
 scan_delay = 0.1
