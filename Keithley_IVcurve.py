@@ -93,3 +93,24 @@ for step in range(int(N_points)):
 # CLOSE THE SESSION
 print('Finished run.')
 keithley.shutdown()
+
+#PLOT THE RESULTS
+# PLOT SCAN DATA
+plt.figure()
+plt.rcParams['font.size']=30
+plt.rcParams["figure.figsize"] = [30, 15]
+plt.rcParams["figure.autolayout"] = True
+plt.yscale("log")
+
+plt.plot(voltage,current,'-')
+plt.xlabel("Voltage [V]")
+plt.ylabel("Current [A]")
+#plt.title("Spectrometer scan")
+plt.grid(visible=True, which='major', axis='both')
+#outfigname = outputdir + '/scanWL_HS' + str(vertical_slits) + 'um_VS' + str(horizontal_slits) + 'um_start' + str(mcph_set_wavelength_nm) + 'nm_range' + str(mcph_scan_range_nm) + 'nm_pts' + str(mcph_scan_points) + '.png'
+#print(outfigname)
+#plt.savefig(outfigname, facecolor='w', edgecolor='w')
+plt.show()
+plt.close()
+
+
