@@ -89,3 +89,7 @@ for step in range(int(N_points)):
     SiPMcurrent = keithley.current*(-1)
     voltage.append(SiPMvoltage)
     current.append(SiPMcurrent)
+
+# CLOSE THE SESSION
+print('Finished run.')
+keithley.shutdown()
